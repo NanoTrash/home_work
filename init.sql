@@ -15,18 +15,18 @@ CREATE TABLE IF NOT EXISTS regions (
 INSERT INTO regions (region, maincity, population) 
 VALUES 
    (
-    'Иван Быстров', 'Москва', 
+    'Ivan Bistrov', 'Moskow', 
     '1'
   ), 
   (
-    'Кирилл Бойцов', 'Казань', 
+    'Kirill Boitcov', 'Kazan', 
     '2'
   ), 
   (
-    'Магомед Рашитов', 'Махачкала', 
-    '4'
+    'Magomed Rashitov', 'Mahachkala', 
+    '3'
   ),
   (
-    'Альберт Петров' , 'Иваново',
-    '5'
+    'Albert Petrov' , 'Ivanovo',
+    '4'
   );
