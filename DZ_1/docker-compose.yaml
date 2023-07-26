@@ -1,0 +1,29 @@
+services:
+  db:
+    image: kostenko_database
+    container_name: db
+    expose:
+      - '3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: reg1
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - '7777:3306'
+    volumes:
+      - './dbfile:/var/lib/mysql'
+      - './init.sql:/data/application/init.sql'
+    command: '--init-file /data/application/init.sql'
+  server:
+    image: kostenko_webserver
+    container_name: web
+    ports: 
+      - '8888:80'
+    volumes:
+      - './src:/var/www/html'
+    depends_on:
+      - db
+  client: 
+    image: kostenko_client
+    container_name: cli
