@@ -55,3 +55,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo apt-add-repository ppa:ansible/ansible
 sudo apt update
 sudo apt install ansible
+printf "Все установлено и настроено!\n"
