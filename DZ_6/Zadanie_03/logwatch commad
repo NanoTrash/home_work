@@ -1,0 +1,1 @@
+logwatch --detail Med --mailto=root --range today --service xrdp --service vsftpd --service sshd --format text --output mail
