@@ -26,12 +26,8 @@ fi
 sudo apt install openssh-server -y
 sudo systemctl start ssh
 # К 5 обязательным действиям добавьте ещё 5 на ваше усмотрение.
-# 6. Установка случайных обоев, опубликованных на reddit-канале wallpaper
-wget -O - http://www.reddit.com/r/wallpaper |\
-    grep -Eo 'http://i.imgur.com[^&]+jpg' |\
-    shuf -n 1 |\
-    xargs wget -O background.jpg
-feh --bg-fill background.jpg
+# 6. Установка Logwatch
+sudo apt install logwatch
 # 7. Установка FTP.
 sudo apt install vsftpd -y
 # 8. Установка RDP
