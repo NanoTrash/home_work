@@ -1,0 +1,19 @@
+- name: Install lab
+  hosts: Kostenko
+  become: true
+  tasks:
+    - name: Update
+      apt:
+        update_cache: yes
+    - name: Inst cmatrix
+      apt:
+        name: cmatrix
+        state: present
+    - name: Inst cowsay
+      apt:
+        name: cowsay
+        state: present
+    - name: Inst sl
+      apt:
+        name: sl
+        state: present
